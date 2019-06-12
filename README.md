@@ -3,5 +3,5 @@ Aprenda banco de dados MySQL básico ;-) (o arquivo original está em .pyc para 
 
 • Instalação:
 sudo apt-get git -y
-git clone git@github.com:foxx3r/learn-db.git
+git clone https://github.com/foxx3r/learn-db.git
 
