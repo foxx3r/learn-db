@@ -44,7 +44,8 @@ class Coluna(Tabela): # Coluna herda de Tabela
 	def Manipular_dados(self, condicao): # metodo que precisa de um parametro "condicao"
 		condicao = condicao # condicao é igual ao dado passado como parametro
 		if (condicao == 0): #printar array
-			print(DadosArray)
+			convertido = str(DadosArray).strip('[]')
+			print(convertido)
 			sleep(1)
 			printar = '\n#Mostrar dados da tabela\nSELECT * FROM {};\n'.format(table_input)
 			print(printar)
