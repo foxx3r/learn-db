@@ -53,11 +53,11 @@ class Coluna(Tabela): # Coluna herda de Tabela
 				f.write(printar)
 				f.close()
 		elif (condicao == 1): # remover um item
-			print('Digite a linha na qual você deseja remover começando por 0 -> ')
+			print('Digite a linha na qual você deseja remover -> ')
 			try:
 				sleep(1)
 				decisao_linha = int(input('Digite a linha na qual você deseja remover -> '))
-				DadosArray.pop(decisao_linha)
+				DadosArray.pop(decisao_linha - 1)
 				remover = '\n#Remover um item\nDELETE FROM {}\nWHERE id = {}\n'.format(table_input, decisao_linha)
 				sleep(1)
 				print(remover)
@@ -72,11 +72,10 @@ class Coluna(Tabela): # Coluna herda de Tabela
 				pass
 			sleep(1)
 		elif (condicao == 2): # modificar valor
-			print('Digite a linha na qual você deseja remover começando por 0 -> ')
 			try:
 				decisao_altera_linha = int(input('Qual linha você deseja modificar? -> '))
 				decisao_altera = str(input('O que você deseja inserir? -> '))
-				DadosArray[decisao_altera_linha] = decisao_altera
+				DadosArray[decisao_altera_linha - 1] = decisao_altera
 				modificar = '\n#Modificar uma linha\nUPDATE {}\nSET {} = "{}"\nWHERE id = {}\n'.format(table_input, column_input, decisao_altera, decisao_altera_linha)
 				sleep(1)
 				print(modificar)
