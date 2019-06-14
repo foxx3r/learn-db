@@ -9,7 +9,7 @@ class Banco_de_dados(object): # cria uma classe pai (superclasse)
 		self.base = str(base)
 	def Criar_base(self): # metodo
 		sleep(1)
-		db_variavel = '\n#Criar banco de dados\nCREATE DATABASE IF NOT EXISTS {0};\nUSE {0};\n'.format(base_input)
+		db_variavel = '\n#Criar banco de dados\nCREATE DATABASE IF NOT EXISTS {0};\n#Selecionar banco de dados criado\nUSE {0};\n'.format(base_input)
 		try: # tenta o bloco de comandos abaixo
 			with open(file_input, 'w') as f: # cria uma variavel temporaria
 				f.write(db_variavel) # escreve dentro do arquivo especificado
@@ -53,7 +53,6 @@ class Coluna(Tabela): # Coluna herda de Tabela
 				f.write(printar)
 				f.close()
 		elif (condicao == 1): # remover um item
-			print('Digite a linha na qual você deseja remover -> ')
 			try:
 				sleep(1)
 				decisao_linha = int(input('Digite a linha na qual você deseja remover -> '))
